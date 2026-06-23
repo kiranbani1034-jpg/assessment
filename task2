@@ -1,0 +1,360 @@
+ 1062  git commit "c1:added a2.txt" a2.txt
+ 1063  git log --oneline
+ 1064  cat a2.txt
+ 1065  git status
+ 1066  git log --oneline
+ 1067  git commit -m "c2:added a2.txt" a2.txt
+ 1068  git log --oneline
+tkm10364@o-lt-004264 folder % git branch     
+  feature
+  feature2
+* main
+tkm10364@o-lt-004264 folder % git remote add origin https://github.com/kiranbani1034-jpg/test-first.git
+tkm10364@o-lt-004264 folder % git push origin feature 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (11/11), 901 bytes | 901.00 KiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/kiranbani1034-jpg/test-first.git
+ * [new branch]      feature -> feature
+tkm10364@o-lt-004264 folder % git push origin feature1
+error: src refspec feature1 does not match any
+error: failed to push some refs to 'https://github.com/kiranbani1034-jpg/test-first.git'
+tkm10364@o-lt-004264 folder % git push origin feature2
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 655 bytes | 655.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'feature2' on GitHub by visiting:
+remote:      https://github.com/kiranbani1034-jpg/test-first/pull/new/feature2
+remote: 
+To https://github.com/kiranbani1034-jpg/test-first.git
+ * [new branch]      feature2 -> feature2
+tkm10364@o-lt-004264 folder % clear
+
+tkm10364@o-lt-004264 folder % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tkm10364@o-lt-004264 folder % git clone https://github.com/kiranbani1034-jpg/surprise.git
+Cloning into 'surprise'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+tkm10364@o-lt-004264 folder % ls
+a1.txt		a2.txt		a3.txt		surprise
+tkm10364@o-lt-004264 folder % cd surprise
+tkm10364@o-lt-004264 surprise % git init
+Reinitialized existing Git repository in /Users/tkm10364/Desktop/folder/surprise/.git/
+tkm10364@o-lt-004264 surprise % git config user.name "kiran"           
+tkm10364@o-lt-004264 surprise % git config user.email "kiran@gmail.com"
+tkm10364@o-lt-004264 surprise % touch apple.txt micro.txt
+tkm10364@o-lt-004264 surprise % git add .
+tkm10364@o-lt-004264 surprise % git reset apple.txt micro.txt
+tkm10364@o-lt-004264 surprise % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	apple.txt
+	micro.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+tkm10364@o-lt-004264 surprise % nano apple.txt
+tkm10364@o-lt-004264 surprise % nano micro.txt
+tkm10364@o-lt-004264 surprise % git add apple.txt
+tkm10364@o-lt-004264 surprise % git micro.txt
+git: 'micro.txt' is not a git command. See 'git --help'.
+tkm10364@o-lt-004264 surprise % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   apple.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	micro.txt
+
+tkm10364@o-lt-004264 surprise % git add micro.txt
+tkm10364@o-lt-004264 surprise % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   apple.txt
+	new file:   micro.txt
+
+tkm10364@o-lt-004264 surprise % git commit "added apple.txt" apple.txt
+error: pathspec 'added apple.txt' did not match any file(s) known to git
+tkm10364@o-lt-004264 surprise % git log --oneline
+474bda4 (HEAD -> main, origin/main, origin/HEAD) Initial commit
+tkm10364@o-lt-004264 surprise % git commit -m "added apple.txt" apple.txt
+[main bd7afcc] added apple.txt
+ 1 file changed, 8 insertions(+)
+ create mode 100644 apple.txt
+tkm10364@o-lt-004264 surprise % git log --oneline                        
+bd7afcc (HEAD -> main) added apple.txt
+474bda4 (origin/main, origin/HEAD) Initial commit
+tkm10364@o-lt-004264 surprise % git commit -m "added micro.txt" micro.txt
+[main 8978793] added micro.txt
+ 1 file changed, 7 insertions(+)
+ create mode 100644 micro.txt
+tkm10364@o-lt-004264 surprise % git log --oneline                        
+8978793 (HEAD -> main) added micro.txt
+bd7afcc added apple.txt
+474bda4 (origin/main, origin/HEAD) Initial commit
+tkm10364@o-lt-004264 surprise % git checkout -b surprise
+Switched to a new branch 'surprise'
+tkm10364@o-lt-004264 surprise % git switch surprise
+Already on 'surprise'
+tkm10364@o-lt-004264 surprise % touch unit.txt
+tkm10364@o-lt-004264 surprise % nano unit.txt
+tkm10364@o-lt-004264 surprise % git add .
+tkm10364@o-lt-004264 surprise % git commit -m "added unit.txt" unit.txt
+[surprise 851ae8e] added unit.txt
+ 1 file changed, 12 insertions(+)
+ create mode 100644 unit.txt
+tkm10364@o-lt-004264 surprise % git log --oneline                      
+851ae8e (HEAD -> surprise) added unit.txt
+8978793 (main) added micro.txt
+bd7afcc added apple.txt
+474bda4 (origin/main, origin/HEAD) Initial commit
+tkm10364@o-lt-004264 surprise % git branch
+  main
+* surprise
+tkm10364@o-lt-004264 surprise % git switch main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+tkm10364@o-lt-004264 surprise % git switch main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+tkm10364@o-lt-004264 surprise % git branch
+* main
+  surprise
+tkm10364@o-lt-004264 surprise % touch amazon.txt
+tkm10364@o-lt-004264 surprise % nano amazon.txt
+tkm10364@o-lt-004264 surprise % git branch
+* main
+  surprise
+tkm10364@o-lt-004264 surprise % git merge surprise
+Updating 8978793..851ae8e
+Fast-forward
+ unit.txt | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 unit.txt
+tkm10364@o-lt-004264 surprise % git log --oneline                      
+851ae8e (HEAD -> main, surprise) added unit.txt
+8978793 added micro.txt
+bd7afcc added apple.txt
+474bda4 (origin/main, origin/HEAD) Initial commit
+tkm10364@o-lt-004264 surprise % git branch -m main master
+tkm10364@o-lt-004264 surprise % git switch master
+Already on 'master'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+tkm10364@o-lt-004264 surprise % git branch
+* master
+  surprise
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/kiranbani1034-jpg/surprise.git
+error: remote origin already exists.
+tkm10364@o-lt-004264 surprise % git push origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 951 bytes | 951.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/kiranbani1034-jpg/surprise/pull/new/master
+remote: 
+To https://github.com/kiranbani1034-jpg/surprise.git
+ * [new branch]      master -> master
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/surprise.git  
+error: remote origin already exists.
+tkm10364@o-lt-004264 surprise % git push origin master                                               
+Everything up-to-date
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/kiranbani1034-jpg/se.git    
+error: remote origin already exists.
+tkm10364@o-lt-004264 surprise % git push origin master                                           
+Everything up-to-date
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/kiranbani1034-jpg/se.git
+error: remote origin already exists.
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/kiranbani1034-jpg/kiran-bani.git
+error: remote origin already exists.
+tkm10364@o-lt-004264 surprise % git remote remove origin
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/kiranbani1034-jpg/kiran-bani.git
+tkm10364@o-lt-004264 surprise % git push origin master                                                   
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.75 KiB | 1.75 MiB/s, done.
+Total 12 (delta 2), reused 3 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/kiranbani1034-jpg/kiran-bani.git
+ * [new branch]      master -> master
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/surprise.git    
+error: remote origin already exists.
+tkm10364@o-lt-004264 surprise % git remote remove origin                                                 
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/surprise.git
+tkm10364@o-lt-004264 surprise % git push origin master                                               
+To https://github.com/palurisravs1910/surprise.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/palurisravs1910/surprise.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+tkm10364@o-lt-004264 surprise % git remote remove origin                                             
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/surprise.git
+tkm10364@o-lt-004264 surprise % git push origin master                                               
+To https://github.com/palurisravs1910/surprise.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/palurisravs1910/surprise.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+tkm10364@o-lt-004264 surprise % git remote remove origin                                             
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/surprise.git
+tkm10364@o-lt-004264 surprise % git push origin master                                               
+To https://github.com/palurisravs1910/surprise.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/palurisravs1910/surprise.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+tkm10364@o-lt-004264 surprise % git remote remove origin                                             
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/surprise.git
+tkm10364@o-lt-004264 surprise % git push origin master                                               
+To https://github.com/palurisravs1910/surprise.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/palurisravs1910/surprise.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+tkm10364@o-lt-004264 surprise % git remote remove origin                                             
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/surprise.git
+tkm10364@o-lt-004264 surprise % git push origin master                                               
+To https://github.com/palurisravs1910/surprise.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/palurisravs1910/surprise.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+tkm10364@o-lt-004264 surprise % git fetch origi master
+fatal: 'origi' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+tkm10364@o-lt-004264 surprise % git fetch origin master
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 4), reused 14 (delta 4), pack-reused 0 (from 0)
+Unpacking objects: 100% (14/14), 1.48 KiB | 126.00 KiB/s, done.
+From https://github.com/palurisravs1910/surprise
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+tkm10364@o-lt-004264 surprise % git rebase master
+Current branch master is up to date.
+tkm10364@o-lt-004264 surprise % git rebase origin/master
+error: The following untracked working tree files would be overwritten by checkout:
+	amazon.txt
+Please move or remove them before you switch branches.
+Aborting
+error: could not detach HEAD
+tkm10364@o-lt-004264 surprise % git fetch origin master 
+From https://github.com/palurisravs1910/surprise
+ * branch            master     -> FETCH_HEAD
+tkm10364@o-lt-004264 surprise % git rebase origin/master
+error: The following untracked working tree files would be overwritten by checkout:
+	amazon.txt
+Please move or remove them before you switch branches.
+Aborting
+error: could not detach HEAD
+tkm10364@o-lt-004264 surprise % git remote remote origin
+error: unknown subcommand: `remote'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+tkm10364@o-lt-004264 surprise % git remote remove origin                                             
+tkm10364@o-lt-004264 surprise % git remote add origin https://github.com/palurisravs1910/kidney.git  
+tkm10364@o-lt-004264 surprise % git push origin master                                               
+remote: Permission to palurisravs1910/kidney.git denied to kiranbani1034-jpg.
+fatal: unable to access 'https://github.com/palurisravs1910/kidney.git/': The requested URL returned error: 403
+tkm10364@o-lt-004264 surprise % git pull
