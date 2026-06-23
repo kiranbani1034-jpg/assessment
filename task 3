@@ -1,0 +1,127 @@
+Last login: Tue Jun 23 12:52:27 on ttys000
+tkm10364@o-lt-004264 ~ % cd Desktop                             
+tkm10364@o-lt-004264 Desktop % mkdir master
+tkm10364@o-lt-004264 Desktop % cd master
+tkm10364@o-lt-004264 master % git init
+Initialized empty Git repository in /Users/tkm10364/Desktop/master/.git/
+tkm10364@o-lt-004264 master % git config user.name "kiran"
+tkm10364@o-lt-004264 master % git config user.email "kiran@gmail.com"
+tkm10364@o-lt-004264 master % touch a{1..2}.txt                      
+tkm10364@o-lt-004264 master % git add .                              
+tkm10364@o-lt-004264 master % git commit -m "1:added a1.txt" a1.txt  
+[main (root-commit) af07db8] 1:added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+tkm10364@o-lt-004264 master % git commit -m "2:added a2.txt" a2.txt
+[main fe4d87f] 2:added a2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a2.txt
+tkm10364@o-lt-004264 master % git commit -m "3:added a3.txt" a3.txt
+error: pathspec 'a3.txt' did not match any file(s) known to git
+tkm10364@o-lt-004264 master % git log --oneline
+fe4d87f (HEAD -> main) 2:added a2.txt
+af07db8 1:added a1.txt
+tkm10364@o-lt-004264 master % git branch feature1
+tkm10364@o-lt-004264 master % git switch feature1
+Switched to branch 'feature1'
+tkm10364@o-lt-004264 master % touch a4.txt
+tkm10364@o-lt-004264 master % git add a4.txt
+tkm10364@o-lt-004264 master % git commit -m "4:added a4.txt" a4.txt
+[feature1 e618147] 4:added a4.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a4.txt
+tkm10364@o-lt-004264 master % git log --oneline                    
+e618147 (HEAD -> feature1) 4:added a4.txt
+fe4d87f (main) 2:added a2.txt
+af07db8 1:added a1.txt
+tkm10364@o-lt-004264 master % git branch main
+fatal: a branch named 'main' already exists
+tkm10364@o-lt-004264 master % git branch
+* feature1
+  main
+tkm10364@o-lt-004264 master % git switch main
+Switched to branch 'main'
+tkm10364@o-lt-004264 master % git branch feature2 
+tkm10364@o-lt-004264 master % touch a5.txt
+tkm10364@o-lt-004264 master % git add a5.txt
+tkm10364@o-lt-004264 master % git commit -m "5:added a5.txt" a5.txt
+[main 3368cb7] 5:added a5.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a5.txt
+tkm10364@o-lt-004264 master % git log --oneline                    
+3368cb7 (HEAD -> main) 5:added a5.txt
+fe4d87f (feature2) 2:added a2.txt
+af07db8 1:added a1.txt
+tkm10364@o-lt-004264 master % git branch                           
+  feature1
+  feature2
+* main
+tkm10364@o-lt-004264 master % git branch feature1
+fatal: a branch named 'feature1' already exists
+tkm10364@o-lt-004264 master % git switch feature1
+Switched to branch 'feature1'
+tkm10364@o-lt-004264 master % git branch sub-feature-1
+tkm10364@o-lt-004264 master % git switch sub-feature-1
+Switched to branch 'sub-feature-1'
+tkm10364@o-lt-004264 master % touch a6.txt a7.txt
+tkm10364@o-lt-004264 master % git add a6.txt a7.txt
+tkm10364@o-lt-004264 master % git commit -m "6:added a6.txt" a6.txt
+[sub-feature-1 6dbcd43] 6:added a6.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a6.txt
+tkm10364@o-lt-004264 master % git commit -m "6:added a7.txt" a7.txt
+[sub-feature-1 86198bd] 6:added a7.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a7.txt
+tkm10364@o-lt-004264 master % git switch feature1                
+Switched to branch 'feature1'
+tkm10364@o-lt-004264 master % touch a8.txt
+tkm10364@o-lt-004264 master % git add a8.txt
+tkm10364@o-lt-004264 master % git commit -m "8:added a8.txt" a8.txt
+[feature1 f34c2a8] 8:added a8.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a8.txt
+tkm10364@o-lt-004264 master % git branch
+* feature1
+  feature2
+  main
+  sub-feature-1
+tkm10364@o-lt-004264 master % git switch main
+Switched to branch 'main'
+tkm10364@o-lt-004264 master % touch a9.txt a10.txt
+tkm10364@o-lt-004264 master % git add a9.txt a10.txt
+tkm10364@o-lt-004264 master % git commit -m "8:added a9.txt" a9.txt
+[main ad9106a] 8:added a9.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a9.txt
+tkm10364@o-lt-004264 master % git commit -m "10:added a10.txt" a10.txt
+[main 53ba918] 10:added a10.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a10.txt
+tkm10364@o-lt-004264 master % git switch feature1                   
+Switched to branch 'feature1'
+tkm10364@o-lt-004264 master % git merge sub-feature-1
+Merge made by the 'ort' strategy.
+ a6.txt | 0
+ a7.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a6.txt
+ create mode 100644 a7.txt
+tkm10364@o-lt-004264 master % git switch main        
+Switched to branch 'main'
+tkm10364@o-lt-004264 master % git merge feature1     
+Merge made by the 'ort' strategy.
+ a4.txt | 0
+ a6.txt | 0
+ a7.txt | 0
+ a8.txt | 0
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a4.txt
+ create mode 100644 a6.txt
+ create mode 100644 a7.txt
+ create mode 100644 a8.txt
+tkm10364@o-lt-004264 master % git merge feature2
+Already up to date.
+tkm10364@o-lt-004264 master % git merge feature2
+Already up to date.
+tkm10364@o-lt-004264 master % git 
