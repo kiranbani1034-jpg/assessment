@@ -1,0 +1,258 @@
+Last login: Tue Jun 23 10:32:46 on ttys000
+tkm10364@o-lt-004264 ~ % ls                                                                 
+Applications					OneDrive - TOYOTA KIRLOSKAR MOTOR PVT LTD
+Desktop						Pictures
+Documents					Public
+Downloads					PyCharmMiscProject
+Library						PycharmProjects
+Movies						VirtualBox VMs
+Music
+tkm10364@o-lt-004264 ~ % cd Desktop
+tkm10364@o-lt-004264 Desktop % mkdir folder 
+tkm10364@o-lt-004264 Desktop % cd folder
+tkm10364@o-lt-004264 folder % git init
+Initialized empty Git repository in /Users/tkm10364/Desktop/folder/.git/
+tkm10364@o-lt-004264 folder % git config user.name "kiran"
+tkm10364@o-lt-004264 folder % git config user.email "kiran@gmail.com"
+tkm10364@o-lt-004264 folder % git config user.name                   
+kiran
+tkm10364@o-lt-004264 folder % git config user.email                  
+kiran@gmail.com
+tkm10364@o-lt-004264 folder % touch a{1..3}.txt
+tkm10364@o-lt-004264 folder % ls
+a1.txt	a2.txt	a3.txt
+tkm10364@o-lt-004264 folder % git add .
+tkm10364@o-lt-004264 folder % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   a1.txt
+	new file:   a2.txt
+	new file:   a3.txt
+
+tkm10364@o-lt-004264 folder % git commit -m "c1:added a1.txt" a1.txt
+[main (root-commit) d643f5c] c1:added a1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a1.txt
+tkm10364@o-lt-004264 folder % git commit -m "c2:added a2.txt" a2.txt
+[main d6d9d56] c2:added a2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a2.txt
+tkm10364@o-lt-004264 folder % git commit -m "c3:added a3.txt" a3.txt
+[main 1d109ce] c3:added a3.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a3.txt
+tkm10364@o-lt-004264 folder % git log --oneline
+1d109ce (HEAD -> main) c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % git branch 
+* main
+tkm10364@o-lt-004264 folder % git branch feature
+tkm10364@o-lt-004264 folder % git branch
+  feature
+* main
+tkm10364@o-lt-004264 folder % git switch feature
+Switched to branch 'feature'
+tkm10364@o-lt-004264 folder % touch b{1..2}.txt
+tkm10364@o-lt-004264 folder % ls
+a1.txt	a2.txt	a3.txt	b1.txt	b2.txt
+tkm10364@o-lt-004264 folder % git add .
+tkm10364@o-lt-004264 folder % git commit -m "x1:added b1.txt" b1.txt
+[feature 659a222] x1:added b1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b1.txt
+tkm10364@o-lt-004264 folder % git commit -m "x2:added b2.txt" b2.txt
+[feature 60f0077] x2:added b2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b2.txt
+tkm10364@o-lt-004264 folder % git log --oneline                     
+60f0077 (HEAD -> feature) x2:added b2.txt
+659a222 x1:added b1.txt
+1d109ce (main) c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % git switch main
+Switched to branch 'main'
+tkm10364@o-lt-004264 folder % nano a1.txt
+tkm10364@o-lt-004264 folder % ls
+a1.txt	a2.txt	a3.txt
+tkm10364@o-lt-004264 folder % git log --oneline
+1d109ce (HEAD -> main) c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % cat a1.txt
+hello kiran
+tkm10364@o-lt-004264 folder % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   a1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+tkm10364@o-lt-004264 folder % git commit -m "c4:added a4.txt" a4.txt
+error: pathspec 'a4.txt' did not match any file(s) known to git
+tkm10364@o-lt-004264 folder % git commit -m "c1:added a1.txt" a1.txt
+[main f7548b6] c1:added a1.txt
+ 1 file changed, 1 insertion(+)
+tkm10364@o-lt-004264 folder % git status                            
+On branch main
+nothing to commit, working tree clean
+tkm10364@o-lt-004264 folder % git log --oneline                     
+f7548b6 (HEAD -> main) c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % git branch feature2
+tkm10364@o-lt-004264 folder % git switch2
+git: 'switch2' is not a git command. See 'git --help'.
+
+The most similar command is
+	switch
+tkm10364@o-lt-004264 folder % git branch
+  feature
+  feature2
+* main
+tkm10364@o-lt-004264 folder % git switch feature2
+Switched to branch 'feature2'
+tkm10364@o-lt-004264 folder % toouch c1.txt
+zsh: command not found: toouch
+tkm10364@o-lt-004264 folder % touch c1.txt
+tkm10364@o-lt-004264 folder % ls
+a1.txt	a2.txt	a3.txt	c1.txt
+tkm10364@o-lt-004264 folder % git add .
+tkm10364@o-lt-004264 folder % git commit -m "y1:added c1.txt" c1.txt
+[feature2 db3f5cc] y1:added c1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c1.txt
+tkm10364@o-lt-004264 folder % git log --oneline
+db3f5cc (HEAD -> feature2) y1:added c1.txt
+f7548b6 (main) c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % nano c1.txt
+tkm10364@o-lt-004264 folder % cat c1.txt
+hello bani
+
+tkm10364@o-lt-004264 folder % git add .
+tkm10364@o-lt-004264 folder % git commit -m "y1:added c1.txt" c1.txt
+[feature2 90a1358] y1:added c1.txt
+ 1 file changed, 2 insertions(+)
+tkm10364@o-lt-004264 folder % git log --oneline                     
+90a1358 (HEAD -> feature2) y1:added c1.txt
+db3f5cc y1:added c1.txt
+f7548b6 (main) c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % git switch main
+Switched to branch 'main'
+tkm10364@o-lt-004264 folder % nano a2.txt
+tkm10364@o-lt-004264 folder % git add .
+tkm10364@o-lt-004264 folder % git commit -m "c5:added c5.txt" c5.txt
+error: pathspec 'c5.txt' did not match any file(s) known to git
+tkm10364@o-lt-004264 folder % git commit -m "c1:added c2.txt" c2.txt
+error: pathspec 'c2.txt' did not match any file(s) known to git
+tkm10364@o-lt-004264 folder % git log --oneline                     
+f7548b6 (HEAD -> main) c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   a2.txt
+
+tkm10364@o-lt-004264 folder % git log --oneline                     
+f7548b6 (HEAD -> main) c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % cat c2.txt
+cat: c2.txt: No such file or directory
+tkm10364@o-lt-004264 folder % git commit "c1:added a2.txt" a2.txt
+error: pathspec 'c1:added a2.txt' did not match any file(s) known to git
+tkm10364@o-lt-004264 folder % git log --oneline                  
+f7548b6 (HEAD -> main) c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % cat a2.txt
+hi gays
+tkm10364@o-lt-004264 folder % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   a2.txt
+
+tkm10364@o-lt-004264 folder % git log --oneline
+f7548b6 (HEAD -> main) c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % git commit -m "c2:added a2.txt" a2.txt
+[main 8035399] c2:added a2.txt
+ 1 file changed, 1 insertion(+)
+tkm10364@o-lt-004264 folder % git log --oneline                     
+8035399 (HEAD -> main) c2:added a2.txt
+f7548b6 c1:added a1.txt
+1d109ce c3:added a3.txt
+d6d9d56 c2:added a2.txt
+d643f5c c1:added a1.txt
+tkm10364@o-lt-004264 folder % history
+ 1053  git switch main
+ 1054  nano a2.txt
+ 1055  git add .
+ 1056  git commit -m "c5:added c5.txt" c5.txt
+ 1057  git commit -m "c1:added c2.txt" c2.txt
+ 1058  git log --oneline
+ 1059  git status
+ 1060  git log --oneline
+ 1061  cat c2.txt
+ 1062  git commit "c1:added a2.txt" a2.txt
+ 1063  git log --oneline
+ 1064  cat a2.txt
+ 1065  git status
+ 1066  git log --oneline
+ 1067  git commit -m "c2:added a2.txt" a2.txt
+ 1068  git log --oneline
+tkm10364@o-lt-004264 folder
+tkm10364@o-lt-004264 folder % git branch     
+  feature
+  feature2
+* main
+tkm10364@o-lt-004264 folder % git remote add origin https://github.com/kiranbani1034-jpg/test-first.git
+tkm10364@o-lt-004264 folder % git push origin feature 
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (11/11), 901 bytes | 901.00 KiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/kiranbani1034-jpg/test-first.git
+ * [new branch]      feature -> feature
+tkm10364@o-lt-004264 folder % git push origin feature1
+error: src refspec feature1 does not match any
+error: failed to push some refs to 'https://github.com/kiranbani1034-jpg/test-first.git'
+tkm10364@o-lt-004264 folder % git push origin feature2
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 655 bytes | 655.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'feature2' on GitHub by visiting:
+remote:      https://github.com/kiranbani1034-jpg/test-first/pull/new/feature2
+remote: 
+To https://github.com/kiranbani1034-jpg/test-first.git
+ * [new branch]      feature2 -> feature2
+tkm10364@o-lt-004264 folder % 
